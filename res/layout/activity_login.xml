@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <ScrollView
+        android:paddingTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Konten Login -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/profile_blacks"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_logo"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/login_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/login_title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Email Label -->
+            <TextView
+                android:id="@+id/email_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Email Input -->
+            <com.project.storyapp.CustomEditText
+                android:id="@+id/ed_login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your email"
+                android:inputType="textEmailAddress"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Password Label -->
+            <TextView
+                android:id="@+id/password_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Password Input -->
+            <com.project.storyapp.CustomEditText
+                android:id="@+id/ed_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your password"
+                android:inputType="textPassword"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Login Button -->
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:background="@drawable/button_background"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- ProgressBar -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>
