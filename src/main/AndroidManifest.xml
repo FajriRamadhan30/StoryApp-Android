@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Izin untuk akses internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Izin tambahan jika aplikasi memerlukan akses ke penyimpanan -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StoryApp">
+
+        <!-- Menambahkan API Key Google Maps -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDNbXJiZCdSrrD94k7CSwBqjhH_fNWUo4s" />
+
+        <!-- Landing Activity -->
+        <activity
+            android:name=".landing.LandingActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="true" />
+
+        <!-- Register Activity -->
+        <activity
+            android:name=".register.RegisterActivity"
+            android:exported="true" />
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true" />
+
+        <!-- Maps Activity -->
+        <activity
+            android:name=".maps.MapsActivity"
+            android:exported="true" />
+
+        <!-- Add Story Activity -->
+        <activity
+            android:name=".stories.AddStoryActivity" />
+
+        <!-- Story Detail Activity -->
+        <activity
+            android:name=".stories.StoryDetailActivity" />
+    </application>
+
+</manifest>
